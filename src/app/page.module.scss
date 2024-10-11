@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+.header,
+.main,
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}

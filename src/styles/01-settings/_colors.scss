@@ -1,0 +1,32 @@
+:root {
+  // Gray palette
+  --white: #ffffff;
+  --black: #000000;
+  --gray-25: #fcfcfd;
+  --gray-50: #f9fafb;
+  --gray-200: #eaecf0;
+  --gray-300: #d0d5dd;
+  --gray-400: #98a2b3;
+  --gray-500: #667085;
+  --gray-600: #475467;
+  --gray-800: #1d2939;
+  --gray-900: #101828;
+
+  // Primary palette
+  --primary: #5b7080;
+
+  // Success palette
+  --success-25: #e9fef1;
+  --success-500: #12b76a;
+  --success-600: #039855;
+
+  // Warning palette
+  --warning-25: #fffcf5;
+  --warning-500: #fdb022;
+  --warning-600: #f79009;
+
+  // Error palette
+  --error-25: #fffbfa;
+  --error-500: #f04438;
+  --error-600: #d92d20;
+}
