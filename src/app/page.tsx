@@ -1,16 +1,9 @@
-import { Header, Footer } from './components';
-import styles from './page.module.scss';
-
-export default function Home() {
+export default async function Home() {
+    
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <Header />
-      </div>
-      <main className={styles.main}></main>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
-    </div>
+    <main>
+      <h1>Início</h1>
+      <p></p>
+    </main>
   );
 }
