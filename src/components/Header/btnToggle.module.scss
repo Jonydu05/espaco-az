@@ -1,0 +1,22 @@
+.btn-toggle {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+
+  &.dark_mode {
+    background-color: #1e1e1e;
+    color: #fafafa;
+  }
+
+  &.light_mode {
+    background-color: #fafafa;
+    color: #1e1e1e;
+  }
+}
