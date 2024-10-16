@@ -1,9 +1,20 @@
 ---
+import { Icon } from '../components';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Início">
   <main>
-		<h1>Olá</h1>
-	</main>
+    <h1>Início</h1>
+
+    <Icon class="icon-favorite">favorite</Icon>
+
+    <p>Este é o conteúdo da página inicial.</p>
+  </main>
 </Layout>
+
+<style>
+  .icon-favorite {
+    color: red;
+  }
+</style>

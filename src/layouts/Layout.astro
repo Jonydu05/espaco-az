@@ -1,13 +1,14 @@
 ---
 import '../styles/index.scss';
 import { Header, Footer } from '../components/index';
+import '@fontsource-variable/material-symbols-rounded';
 
 type Props = { title: string };
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR" data-theme="light_mode">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -17,8 +18,38 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-		<Header />
+    <Header />
     <slot />
-		<Footer />
+    <Footer />
   </body>
 </html>
+
+<style lang="scss">
+  html {
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    &[data-theme='dark_mode'] {
+      background-color: #1e1e1e;
+      color: #fafafa;
+    }
+    &[data-theme='light_mode'] {
+      background-color: #fafafa;
+      color: #1e1e1e;
+    }
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const currentTheme = localStorage.getItem('theme') as
+      | 'ligth_mode'
+      | 'dark_mode'
+      | null;
+
+    if (currentTheme) {
+      document.documentElement.dataset.theme = currentTheme;
+    }
+  });
+</script>
