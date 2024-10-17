@@ -2,6 +2,8 @@
 import '../styles/index.scss';
 import { Header, Footer } from '../components/index';
 import '@fontsource-variable/material-symbols-rounded';
+import '@fontsource-variable/nunito-sans';
+import '@fontsource-variable/gabarito';
 
 type Props = { title: string };
 const { title } = Astro.props;
@@ -29,15 +31,17 @@ const { title } = Astro.props;
     transition:
       background-color 0.3s,
       color 0.3s;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+  }
 
-    &[data-theme='dark_mode'] {
-      background-color: #1e1e1e;
-      color: #fafafa;
-    }
-    &[data-theme='light_mode'] {
-      background-color: #fafafa;
-      color: #1e1e1e;
-    }
+  body {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 </style>
 

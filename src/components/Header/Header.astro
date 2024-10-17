@@ -1,11 +1,39 @@
 ---
 import Menu from '../Menu/Menu.astro';
+import ButtonToggle from './btnToggle';
 ---
 
-<header>
+<header class="header">
   <h1>Header</h1>
   <nav>
-    <Menu />
+    <Menu class="header__menu" />
   </nav>
 
+  <ButtonToggle client:visible />
 </header>
+
+<style lang="scss">
+  @use '../../styles/02-tools/typography-mixins' as typo;
+  header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--md);
+  }
+
+  .header__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include typo.body-large;
+  }
+</style>

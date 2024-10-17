@@ -1,0 +1,119 @@
+@mixin label-small {
+  font-family: var(--font-nunito);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+@mixin label-medium {
+  font-family: var(--font-nunito);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+@mixin label-large {
+  font-family: var(--font-nunito);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+@mixin body-small {
+  font-family: var(--font-nunito);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
+@mixin body-medium {
+  font-family: var(--font-nunito);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+@mixin body-large {
+  font-family: var(--font-nunito);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+@mixin title-small {
+  font-family: var(--font-nunito);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+@mixin title-medium {
+  font-family: var(--font-nunito);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+@mixin title-large {
+  font-family: var(--font-nunito);
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
+
+@mixin headline-small {
+  font-family: var(--font-gabarito);
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
+
+@mixin headline-medium {
+  font-family: var(--font-gabarito);
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 0px;
+}
+
+@mixin headline-large {
+  font-family: var(--font-gabarito);
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0px;
+}
+
+@mixin display-small {
+  font-family: var(--font-nunito);
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0px;
+}
+
+@mixin display-medium {
+  font-family: var(--font-nunito);
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 52px;
+  letter-spacing: 0px;
+}
+
+@mixin display-large {
+  font-family: var(--font-nunito);
+  font-weight: normal;
+  font-size: 57px;
+  line-height: 64px;
+  letter-spacing: -0.25px;
+}

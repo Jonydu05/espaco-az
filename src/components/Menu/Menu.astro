@@ -1,8 +1,19 @@
-<ul>
+---
+interface Props {
+  isInFooter?: boolean;
+  class?: string;
+}
+const { class: className, isInFooter = false, ...rest } = Astro.props;
+---
+
+<ul class={className} {...rest}>
   <li><a href="/">Início</a></li>
-  <li><a href="/about-me">Sobre mim</a></li>
-  <li><a href="/contact">Contato</a></li>
   <li><a href="/histories">Relatos</a></li>
-  <li><a href="#">Marcar consulta</a></li>
-  <li><a href="/terms">Termos</a></li>
+  <li><a href="/contact">Contato</a></li>
+  {
+    isInFooter && (
+      <li><a href="/about-me">Sobre mim</a></li>
+      <li><a href="/terms">Termos</a></li>
+    )
+  }
 </ul>
