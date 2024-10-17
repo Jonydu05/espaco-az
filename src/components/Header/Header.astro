@@ -3,7 +3,7 @@ import Menu from '../Menu/Menu.astro';
 import ButtonToggle from './btnToggle';
 ---
 
-<header class="header">
+<header class="header header--visible">
   <h1>Header</h1>
   <nav>
     <Menu class="header__menu" />
@@ -12,28 +12,53 @@ import ButtonToggle from './btnToggle';
   <ButtonToggle client:visible />
 </header>
 
+<script>
+  let lastScrollY = window.scrollY;
+
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY < lastScrollY) {
+      header?.classList.add('header--visible');
+    } else {
+      header?.classList.remove('header--visible');
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
+
 <style lang="scss">
-  @use '../../styles/02-tools/typography-mixins' as typo;
-  header {
+  .header {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     padding: 16px 24px;
+    height: 80px;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
     position: sticky;
-    top: 0;
+    top: -80px;
     left: 0;
     right: 0;
-    background: var(--md);
-  }
+    transition: top 0.3s;
+    z-index: var(--z-index-header);
 
-  .header__menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    &--visible {
+      top: 0;
+    }
 
-    @include typo.body-large;
+    &__menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      @include body-large;
+    }
   }
 </style>

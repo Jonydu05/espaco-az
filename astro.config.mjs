@@ -9,11 +9,12 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern-compiler'
-        }
-      }
-    }
+          api: 'modern-compiler',
+          additionalData: `@use "/src/styles/02-tools/" as *;`,
+        },
+      },
+    },
   },
 
-  integrations: [react()]
+  integrations: [react()],
 });
