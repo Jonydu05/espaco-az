@@ -4,12 +4,14 @@ import ButtonToggle from './btnToggle';
 ---
 
 <header class="header header--visible">
-  <h1>Header</h1>
-  <nav>
-    <Menu class="header__menu" />
-  </nav>
+  <div>
+    <h1>Espaço AZ</h1>
+    <nav>
+      <Menu class="header__menu" />
+    </nav>
 
-  <ButtonToggle client:visible />
+    <ButtonToggle client:visible />
+  </div>
 </header>
 
 <script>
@@ -31,18 +33,20 @@ import ButtonToggle from './btnToggle';
 </script>
 
 <style lang="scss">
+  h1 {
+    @include headline-large;
+  }
   .header {
-    display: flex;
     width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
     padding: 16px 24px;
-    height: 80px;
+    height: 90px;
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     position: sticky;
-    top: -80px;
+    top: -90px;
     left: 0;
     right: 0;
     transition: top 0.3s;
@@ -59,6 +63,15 @@ import ButtonToggle from './btnToggle';
       gap: 12px;
 
       @include body-large;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 1400px;
+      width: 100%;
     }
   }
 </style>

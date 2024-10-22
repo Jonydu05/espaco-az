@@ -14,13 +14,16 @@ importers:
       '@astrojs/react':
         specifier: ^3.6.2
         version: 3.6.2(@types/react-dom@18.3.1)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.9(sass@1.79.5))
-      '@fontsource-variable/gabarito':
+      '@fontsource-variable/dynapuff':
         specifier: ^5.1.0
         version: 5.1.0
       '@fontsource-variable/material-symbols-rounded':
         specifier: ^5.1.2
         version: 5.1.2
       '@fontsource-variable/nunito-sans':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/roboto':
         specifier: ^5.1.0
         version: 5.1.0
       '@types/react':
@@ -363,14 +366,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/gabarito@5.1.0':
-    resolution: {integrity: sha512-6xEt52C47t/fRXmkYWiFJw1MOSnL+ANFIn2KN3o1emEzO0wc5r8peMIDl8Upz1rPSfivZQ+7JB4dA+EtSypnbg==}
+  '@fontsource-variable/dynapuff@5.1.0':
+    resolution: {integrity: sha512-ckfi/dJCA01dc6mYrC0nvNnY5iQCyz5KzG2SfEGhmOusYkbPDgyhHuyJQZSQlRDcVkC/Z+5Mpx9560INKYOqyg==}
 
   '@fontsource-variable/material-symbols-rounded@5.1.2':
     resolution: {integrity: sha512-twPi3k83tKmXw2r4VkqMLRMDvIxZlospGydYjVqfMbKPkj6VzAmc2Aw4Pweb7Tg6n04a7LuP/V+gAdyYdgBZPA==}
 
   '@fontsource-variable/nunito-sans@5.1.0':
     resolution: {integrity: sha512-XiX+CmDDROJpUGFHr+XtcOaRaj4ramC8+62lQUO0LvvT2riB3jTBdRB6YbiLTt6Nu0IxSgLwwXzo0WbIako70Q==}
+
+  '@fontsource/roboto@5.1.0':
+    resolution: {integrity: sha512-cFRRC1s6RqPygeZ8Uw/acwVHqih8Czjt6Q0MwoUoDe9U3m4dH1HmNDRBZyqlMSFwgNAUKgFImncKdmDHyKpwdg==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2369,11 +2375,13 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@fontsource-variable/gabarito@5.1.0': {}
+  '@fontsource-variable/dynapuff@5.1.0': {}
 
   '@fontsource-variable/material-symbols-rounded@5.1.2': {}
 
   '@fontsource-variable/nunito-sans@5.1.0': {}
+
+  '@fontsource/roboto@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

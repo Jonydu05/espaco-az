@@ -1,0 +1,53 @@
+---
+import Icon from '../Icon/Icon.astro';
+
+interface Props {
+  text: string;
+  link: string;
+  icon?: string;
+  class?: string;
+}
+
+const { text, link, icon, class: className, ...rest } = Astro.props;
+---
+
+<button class={`btn-link ${className}`} data-link={link} {...rest}>
+  {icon && <Icon>{icon}</Icon>}
+  {text}
+</button>
+
+<style lang="scss">
+  button {
+    @include label-large;
+
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 28px;
+    gap: 8px;
+    padding: 16px 24px;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+
+    &:has(.icon) {
+      padding: 16px 24px 16px 16px;
+    }
+  }
+</style>
+
+<script>
+  function initButtons() {
+    const btns: NodeListOf<HTMLButtonElement> =
+      document.querySelectorAll('.btn-link');
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.open(btn.dataset.link, '_blank');
+      });
+    });
+  }
+
+  initButtons();
+</script>

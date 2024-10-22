@@ -1,38 +1,41 @@
 ---
-import { Icon } from '../components';
+import TextContent from '../components/Text-content/TextContent.astro';
 import Layout from '../layouts/Layout.astro';
+
+const image = {
+  src: 'https://plus.unsplash.com/premium_photo-1661497566854-7a75d3e98996?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  alt: 'Manicure usando uma lixa elétrica em uma cliente.',
+  origin: '26/08/2022 - Unsplash ₢',
+};
+
+const content = {
+  title: 'Início',
+  text: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit numquam, aliquid perspiciatis in esse illo ullam ipsa eum! Eveniet possimus eligendi a, placeat suscipit accusamus nihil ratione totam rerum nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. A sit recusandae aut deserunt, reprehenderit maiores sequi? Nesciunt, numquam consequatur! Debitis suscipit inventore aliquid reprehenderit nostrum non quod eos, quasi quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda harum dignissimos laboriosam, suscipit tenetur quaerat, ipsum earum laborum nihil inventore, neque natus voluptatum ex magni minus non aperiam repellendus?',
+  btn: {
+    text: 'Saiba mais',
+    link: '/about',
+  },
+};
 ---
 
 <Layout title="Início">
   <main>
     <h1>Início</h1>
 
-    <Icon class="icon-favorite">favorite</Icon>
-
-    <p>Este é o conteúdo da página inicial.</p>
-
-    <section>
-      <img
-        src="https://images.unsplash.com/photo-1728972950043-5102720cf63c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Imagem do unsplash"
-      />
-    </section>
-
-    <section>
-      <img
-        src="https://images.unsplash.com/photo-1728929785870-87f654d53ac4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Imagem do unsplash"
-      />
-    </section>
+    <TextContent image={image} content={content} />
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
   .icon-favorite {
     color: red;
   }
 
   section {
     padding: 24px;
+  }
+
+  h1 {
+    @include display-large;
   }
 </style>

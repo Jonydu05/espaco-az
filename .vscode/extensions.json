@@ -1,4 +1,17 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "aaron-bond.better-comments",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "github.copilot",
+    "github.copilot-chat",
+    "jgclark.vscode-todo-highlight",
+    "ms-ceintl.vscode-language-pack-pt-br",
+    "ms-vscode.vscode-typescript-next",
+    "phoenisx.cssvar",
+    "vscode-icons-team.vscode-icons",
+    "xabikos.javascriptsnippets"
+  ],
   "unwantedRecommendations": []
 }

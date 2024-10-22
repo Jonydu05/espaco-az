@@ -1,0 +1,98 @@
+---
+import Button from '../Button/Button.astro';
+
+interface Props {
+  image?: {
+    src: string;
+    alt: string;
+    origin: string;
+  };
+  content: {
+    title: string;
+    text: string;
+    btn?: {
+      text: string;
+      link: string;
+    };
+  };
+}
+
+const { image, content } = Astro.props;
+---
+
+<section>
+  <div>
+    {
+      image && (
+        <figure>
+          <img src={image.src} alt={image.alt} />
+          <figcaption>{image.origin}</figcaption>
+        </figure>
+      )
+    }
+    <article>
+      <h4>{content.title}</h4>
+
+      <p>{content.text}</p>
+
+      {
+        content.btn && (
+          <Button
+            class="ml-auto"
+            text={content.btn.text}
+            link={content.btn.link}
+            icon="open_in_new"
+          />
+        )
+      }
+    </article>
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  div {
+    max-width: 1400px;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 28px;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  p {
+    @include body-large;
+  }
+
+  h4 {
+    @include title-large;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 45%;
+  }
+
+  figcaption {
+    @include label-large;
+  }
+</style>
