@@ -4,9 +4,14 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Fontes">
   <main>
-    <div class="font-div">
-      <span>Tamanho das fontes: 48px</span>
+    <div class="font-div headline" id="title-content">
       <span>Espaço AZ <br /> Saúde é beleza!</span>
+    </div>
+
+    <div>
+      <p>Tamanhos:</p>
+      <button class="btn-size headline active">Headline</button>
+      <button class="btn-size display">Display</button>
     </div>
 
     <div>
@@ -41,7 +46,8 @@ import Layout from '../layouts/Layout.astro';
     gap: 5rem;
   }
 
-  .btn-fonts {
+  .btn-fonts,
+  .btn-size {
     all: unset;
     box-sizing: border-box;
     padding: 0.5rem 1rem;
@@ -70,13 +76,17 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  div:has(.btn-fonts) {
+  div:has(.btn-fonts, .btn-size) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     max-width: 900px;
+
+    p {
+      width: 100%;
+    }
   }
 
   .font-div {
@@ -87,13 +97,11 @@ import Layout from '../layouts/Layout.astro';
     span {
       white-space: pre-wrap;
       text-align: center;
-      font-size: 48px;
-      font-family: var(--font-display);
     }
   }
 </style>
 
-<style is:global>
+<style lang="scss" is:global>
   .roboto {
     --font-display: 'Roboto', system-ui;
   }
@@ -137,9 +145,20 @@ import Layout from '../layouts/Layout.astro';
   .bagel-fat-one {
     --font-display: 'Bagel Fat One', system-ui;
   }
+
+  #title-content {
+    &.headline {
+      @include headline;
+    }
+
+    &.display {
+      @include display;
+    }
+  }
 </style>
 
 <script>
+  const title = document.getElementById('title-content');
   window.addEventListener('DOMContentLoaded', () => {
     document.documentElement.classList.add('roboto');
   });
@@ -170,6 +189,24 @@ import Layout from '../layouts/Layout.astro';
           b.classList.remove('active');
         }
       });
+    });
+  });
+
+  const btnSize: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.btn-size');
+
+  btnSize.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const className = btn.classList[1];
+      title?.classList.remove('headline', 'display');
+      title?.classList.add(className);
+
+      btnSize.forEach(b => {
+        if (b !== btn) {
+          b.classList.remove('active');
+        }
+      });
+
+      btn.classList.add('active');
     });
   });
 </script>
