@@ -46,21 +46,16 @@ const { title } = Astro.props;
   }
 
   body {
-    min-height: 200vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
-    // align-items: center;
   }
 </style>
 
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    const currentTheme = localStorage.getItem('theme') as
-      | 'ligth_mode'
-      | 'dark_mode'
-      | null;
+    const currentTheme = localStorage.getItem('theme') as 'ligth_mode' | 'dark_mode' | null;
 
     if (currentTheme) {
       document.documentElement.dataset.theme = currentTheme;
