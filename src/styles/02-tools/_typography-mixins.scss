@@ -71,7 +71,7 @@
 }
 
 @mixin headline-small {
-  font-family: var(--font-dynapuff);
+  font-family: var(--font-display);
   font-weight: normal;
   font-size: 24px;
   line-height: 32px;
@@ -79,7 +79,7 @@
 }
 
 @mixin headline-medium {
-  font-family: var(--font-dynapuff);
+  font-family: var(--font-display);
   font-weight: normal;
   font-size: 28px;
   line-height: 36px;
@@ -87,7 +87,7 @@
 }
 
 @mixin headline-large {
-  font-family: var(--font-dynapuff);
+  font-family: var(--font-display);
   font-weight: normal;
   font-size: 32px;
   line-height: 40px;
@@ -95,7 +95,7 @@
 }
 
 @mixin display-small {
-  font-family: var(--font-dynapuff);
+  font-family: var(--font-display);
   font-weight: normal;
   font-size: 36px;
   line-height: 44px;
@@ -103,7 +103,7 @@
 }
 
 @mixin display-medium {
-  font-family: var(--font-dynapuff);
+  font-family: var(--font-display);
   font-weight: normal;
   font-size: 45px;
   line-height: 52px;
@@ -111,7 +111,7 @@
 }
 
 @mixin display-large {
-  font-family: var(--font-dynapuff);
+  font-family: var(--font-display);
   font-weight: normal;
   font-size: 57px;
   line-height: 64px;

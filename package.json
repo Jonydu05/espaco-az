@@ -12,10 +12,19 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/react": "^3.6.2",
-    "@fontsource-variable/dynapuff": "^5.1.0",
     "@fontsource-variable/material-symbols-rounded": "^5.1.2",
     "@fontsource-variable/nunito-sans": "^5.1.0",
-    "@fontsource/roboto": "^5.1.0",
+
+    "@fontsource/bagel-fat-one": "^5.1.0",
+    "@fontsource/calistoga": "^5.1.0",
+    "@fontsource/caprasimo": "^5.1.0",
+    "@fontsource/changa-one": "^5.1.0",
+    "@fontsource/chicle": "^5.1.0",
+    "@fontsource/kavoon": "^5.1.0",
+    "@fontsource/konkhmer-sleokchher": "^5.1.0",
+    "@fontsource/poetsen-one": "^5.1.0",
+    "@fontsource/staatliches": "^5.1.0",
+    
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "astro": "^4.16.5",

@@ -14,16 +14,37 @@ importers:
       '@astrojs/react':
         specifier: ^3.6.2
         version: 3.6.2(@types/react-dom@18.3.1)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.9(sass@1.79.5))
-      '@fontsource-variable/dynapuff':
-        specifier: ^5.1.0
-        version: 5.1.0
       '@fontsource-variable/material-symbols-rounded':
         specifier: ^5.1.2
         version: 5.1.2
       '@fontsource-variable/nunito-sans':
         specifier: ^5.1.0
         version: 5.1.0
-      '@fontsource/roboto':
+      '@fontsource/bagel-fat-one':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/calistoga':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/caprasimo':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/changa-one':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/chicle':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/kavoon':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/konkhmer-sleokchher':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/poetsen-one':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/staatliches':
         specifier: ^5.1.0
         version: 5.1.0
       '@types/react':
@@ -366,17 +387,38 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/dynapuff@5.1.0':
-    resolution: {integrity: sha512-ckfi/dJCA01dc6mYrC0nvNnY5iQCyz5KzG2SfEGhmOusYkbPDgyhHuyJQZSQlRDcVkC/Z+5Mpx9560INKYOqyg==}
-
   '@fontsource-variable/material-symbols-rounded@5.1.2':
     resolution: {integrity: sha512-twPi3k83tKmXw2r4VkqMLRMDvIxZlospGydYjVqfMbKPkj6VzAmc2Aw4Pweb7Tg6n04a7LuP/V+gAdyYdgBZPA==}
 
   '@fontsource-variable/nunito-sans@5.1.0':
     resolution: {integrity: sha512-XiX+CmDDROJpUGFHr+XtcOaRaj4ramC8+62lQUO0LvvT2riB3jTBdRB6YbiLTt6Nu0IxSgLwwXzo0WbIako70Q==}
 
-  '@fontsource/roboto@5.1.0':
-    resolution: {integrity: sha512-cFRRC1s6RqPygeZ8Uw/acwVHqih8Czjt6Q0MwoUoDe9U3m4dH1HmNDRBZyqlMSFwgNAUKgFImncKdmDHyKpwdg==}
+  '@fontsource/bagel-fat-one@5.1.0':
+    resolution: {integrity: sha512-rgJRgKUFIrLrs3IsfVJdCgrkWXoxbLCSrBQJm6MQSuP5YpGJs0CW3obyeIQ8C29aQxaIvT8gJRdszAFL7hjNBQ==}
+
+  '@fontsource/calistoga@5.1.0':
+    resolution: {integrity: sha512-gUABkstnQep0WzfczyY0nsXXQAX4m8D791p3BKVyyHPcVVChRVBG7HnkIZsOP8rs/O8nMtyNFrC04hEB+e2m6g==}
+
+  '@fontsource/caprasimo@5.1.0':
+    resolution: {integrity: sha512-nttL8ukHQP/ZVVOGqb1ytjWSFFGj+ZNl56p7d4a47nllqE1Vj62yAR8DFSFxvmoQJLkgJ47Cj2Xm36qgKUPHxA==}
+
+  '@fontsource/changa-one@5.1.0':
+    resolution: {integrity: sha512-5gvKKfCeqi7swkmEILjD28djRypf/b2gRIJz2qLtuOz61njycPurW3eSIlKViBGDtis4LmYoQoXslNukYaqJ5Q==}
+
+  '@fontsource/chicle@5.1.0':
+    resolution: {integrity: sha512-QpWCN40lUd5n7K01lkNHFQ8bNDMBGxGr8fOvDhcEOtH9NrX3IUcU6xdytA+tFh1PY4EKTszzQ0XNUqu90XImBA==}
+
+  '@fontsource/kavoon@5.1.0':
+    resolution: {integrity: sha512-IYmx1DIDsxR8gO9ne5WC7/CGGASlwmEw9FXMbzG3O9EfR2gL6My6poK2kMufrXdho1aexesUdSP/pG9jpqLIuw==}
+
+  '@fontsource/konkhmer-sleokchher@5.1.0':
+    resolution: {integrity: sha512-kWfYjyYMU0etYmMLqH14MtDAbUKw94tiOGBijKsbgxrhTt0/4rfZlRP22a24Yy3/jgHgSezPO0EBB5dCCtYr3Q==}
+
+  '@fontsource/poetsen-one@5.1.0':
+    resolution: {integrity: sha512-K6u3OFsFoo0zzOazzxTtW+6KJkGOoiWapT6NB9ffjnUH/vI6eYTUJ6riB8uR3CpjC2KB6Nzu1S3k695n+qKJiQ==}
+
+  '@fontsource/staatliches@5.1.0':
+    resolution: {integrity: sha512-bJAKSIWGL7XE3+AAnSTkk8dDSiNegMf7F560wIXvFuSF0UJDNW1dX6ctyJTRqFKFso/PaULnSYQdf8x101KOkQ==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2375,13 +2417,27 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@fontsource-variable/dynapuff@5.1.0': {}
-
   '@fontsource-variable/material-symbols-rounded@5.1.2': {}
 
   '@fontsource-variable/nunito-sans@5.1.0': {}
 
-  '@fontsource/roboto@5.1.0': {}
+  '@fontsource/bagel-fat-one@5.1.0': {}
+
+  '@fontsource/calistoga@5.1.0': {}
+
+  '@fontsource/caprasimo@5.1.0': {}
+
+  '@fontsource/changa-one@5.1.0': {}
+
+  '@fontsource/chicle@5.1.0': {}
+
+  '@fontsource/kavoon@5.1.0': {}
+
+  '@fontsource/konkhmer-sleokchher@5.1.0': {}
+
+  '@fontsource/poetsen-one@5.1.0': {}
+
+  '@fontsource/staatliches@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

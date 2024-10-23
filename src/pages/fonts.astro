@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Fontes">
+  <main>
+    <h1 id="title-font">
+      Espaço AZ <br />
+      Saúde é beleza!
+    </h1>
+
+    <div>
+      <p>Fontes:</p>
+      <button class="btn-fonts nunito">Nunito Sans</button>
+      <button class="btn-fonts calistoga">Calistoga</button>
+      <button class="btn-fonts caprasimo">Caprasimo</button>
+      <button class="btn-fonts staatliches">Staatliches</button>
+      <button class="btn-fonts poetsen-one">Poetsen one</button>
+      <button class="btn-fonts konkhmer-sleokchhner"> Konkhmer Sleokchher </button>
+      <button class="btn-fonts kavoon">Kavoon</button>
+      <button class="btn-fonts chicle">Chicle</button>
+      <button class="btn-fonts changa-one">Changa One</button>
+      <button class="btn-fonts bagel-fat-one">Bagel Fat One</button>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  h1 {
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 5rem;
+  }
+
+  .nunito {
+    font-family: 'Nunito Sans Variable', system-ui;
+  }
+
+  .calistoga {
+    font-family: 'Calistoga', system-ui;
+  }
+
+  .caprasimo {
+    font-family: 'Caprasimo', system-ui;
+  }
+
+  .staatliches {
+    font-family: 'Staatliches', system-ui;
+  }
+
+  .poetsen-one {
+    font-family: 'Poetsen One', system-ui;
+  }
+
+  .konkhmer-sleokchhner {
+    font-family: 'Konkhmer Sleokchhner', system-ui;
+  }
+
+  .kavoon {
+    font-family: 'Kavoon', system-ui;
+  }
+
+  .chicle {
+    font-family: 'Chicle', system-ui;
+  }
+
+  .changa-one {
+    font-family: 'Changa One', system-ui;
+  }
+
+  .bagel-fat-one {
+    font-family: 'Bagel Fat One', system-ui;
+  }
+</style>
+
+<script>
+  const btns: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.btn-fonts');
+  const h1 = document.getElementById('title-font');
+
+  btns.forEach(btn => {
+    btn.addEventListener('')
+  })
+</script>
