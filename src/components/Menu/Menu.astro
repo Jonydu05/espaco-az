@@ -1,19 +1,22 @@
 ---
 interface Props {
-  isInFooter?: boolean;
   class?: string;
 }
-const { class: className, isInFooter = false, ...rest } = Astro.props;
+const { class: className, ...rest } = Astro.props;
 ---
 
 <ul class={className} {...rest}>
   <li><a href="/">Início</a></li>
   <li><a href="/histories">Relatos</a></li>
   <li><a href="/contact">Contato</a></li>
-  {
-    isInFooter && (
-      <li><a href="/about">Sobre mim</a></li>
-      <li><a href="/terms">Termos</a></li>
-    )
-  }
+  <slot/>
 </ul>
+
+<style>
+  ul, li, a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+</style>

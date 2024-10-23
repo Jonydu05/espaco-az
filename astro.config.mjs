@@ -20,8 +20,6 @@ export default defineConfig({
   integrations: [react()],
   output: 'static',
   adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
+    webAnalytics: { enabled: true },
   }),
 });
