@@ -4,19 +4,19 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Fontes">
   <main>
-    <h1 id="title-font">
-      Espaço AZ <br />
-      Saúde é beleza!
-    </h1>
+    <div class="font-div">
+      <span>Tamanho das fontes: 48px</span>
+      <span>Espaço AZ <br /> Saúde é beleza!</span>
+    </div>
 
     <div>
       <p>Fontes:</p>
-      <button class="btn-fonts nunito">Nunito Sans</button>
+      <button class="btn-fonts nunito">Nunito Sans Variable</button>
       <button class="btn-fonts calistoga">Calistoga</button>
       <button class="btn-fonts caprasimo">Caprasimo</button>
       <button class="btn-fonts staatliches">Staatliches</button>
       <button class="btn-fonts poetsen-one">Poetsen one</button>
-      <button class="btn-fonts konkhmer-sleokchhner"> Konkhmer Sleokchher </button>
+      <button class="btn-fonts konkhmer-sleokchhner">Konkhmer Sleokchher</button>
       <button class="btn-fonts kavoon">Kavoon</button>
       <button class="btn-fonts chicle">Chicle</button>
       <button class="btn-fonts changa-one">Changa One</button>
@@ -28,6 +28,7 @@ import Layout from '../layouts/Layout.astro';
 <style lang="scss">
   h1 {
     text-align: center;
+    font-family: var(--font-display);
   }
 
   main {
@@ -39,52 +40,114 @@ import Layout from '../layouts/Layout.astro';
     gap: 5rem;
   }
 
+  .btn-fonts {
+    all: unset;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--md-sys-color-outline);
+    font-family: var(--font-display);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 28px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow:
+        0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+      background: var(--md-sys-color-tertiary-container);
+      color: var(--md-sys-color-on-tertiary-container);
+    }
+  }
+
+  div:has(.btn-fonts) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 800px;
+  }
+
+  .font-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    span {
+      white-space: pre-wrap;
+      text-align: center;
+      font-size: 48px;
+      font-family: var(--font-display);
+    }
+  }
+</style>
+
+<style is:global>
   .nunito {
-    font-family: 'Nunito Sans Variable', system-ui;
+    --font-display: 'Nunito Sans Variable', system-ui;
   }
 
   .calistoga {
-    font-family: 'Calistoga', system-ui;
+    --font-display: 'Calistoga', system-ui;
   }
 
   .caprasimo {
-    font-family: 'Caprasimo', system-ui;
+    --font-display: 'Caprasimo', system-ui;
   }
 
   .staatliches {
-    font-family: 'Staatliches', system-ui;
+    --font-display: 'Staatliches', system-ui;
   }
 
   .poetsen-one {
-    font-family: 'Poetsen One', system-ui;
+    --font-display: 'Poetsen One', system-ui;
   }
 
   .konkhmer-sleokchhner {
-    font-family: 'Konkhmer Sleokchhner', system-ui;
+    --font-display: 'Konkhmer Sleokchhner', system-ui;
   }
 
   .kavoon {
-    font-family: 'Kavoon', system-ui;
+    --font-display: 'Kavoon', system-ui;
   }
 
   .chicle {
-    font-family: 'Chicle', system-ui;
+    --font-display: 'Chicle', system-ui;
   }
 
   .changa-one {
-    font-family: 'Changa One', system-ui;
+    --font-display: 'Changa One', system-ui;
   }
 
   .bagel-fat-one {
-    font-family: 'Bagel Fat One', system-ui;
+    --font-display: 'Bagel Fat One', system-ui;
   }
 </style>
 
 <script>
   const btns: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.btn-fonts');
-  const h1 = document.getElementById('title-font');
 
   btns.forEach(btn => {
-    btn.addEventListener('')
-  })
+    btn.addEventListener('click', () => {
+      const font = btn.classList[1];
+      document.documentElement.classList.remove(
+        'nunito',
+        'calistoga',
+        'caprasimo',
+        'staatliches',
+        'poetsen-one',
+        'konkhmer-sleokchhner',
+        'kavoon',
+        'chicle',
+        'changa-one',
+        'bagel-fat-one',
+      );
+      document.documentElement.classList.add(font);
+    });
+  });
 </script>
