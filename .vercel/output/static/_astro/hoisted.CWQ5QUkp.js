@@ -1,1 +1,0 @@
-window.addEventListener("DOMContentLoaded",()=>{const e=localStorage.getItem("theme");e&&(document.documentElement.dataset.theme=e)});let t=window.scrollY;const l=document.querySelector(".header");window.addEventListener("scroll",()=>{const e=window.scrollY;e<t?l?.classList.add("header--visible"):l?.classList.remove("header--visible"),t=e});
