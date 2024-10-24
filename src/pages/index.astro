@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import TextContent from '../components/Text-content/TextContent.astro';
 import Layout from '../layouts/Layout.astro';
+import hero from '../images/hero.jpg';
 
-const image = {
+const imageContent = {
   src: 'https://plus.unsplash.com/premium_photo-1661497566854-7a75d3e98996?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   alt: 'Manicure usando uma lixa elétrica em uma cliente.',
   origin: '26/08/2022 - Unsplash ₢',
@@ -20,24 +22,60 @@ const content = {
 
 <Layout title="Início">
   <main>
-    <h1>Espaço AZ <br>
-    Saúde é beleza!
-    </h1>
+    <section>
+      <Image class="CTA__img" src={hero} alt="Imagem de uma mulher pintando a própria unha, com um esmalte branco." />
 
-    <TextContent image={image} content={content} />
+      <div class="CTA__text">
+        <span class="CTA__title">Seja bem-vinda(o) ao Espaço AZ</span>
+        <span class="CTA__headline">Aqui, saúde é beleza!</span>
+      </div>
+    </section>
+
+    <TextContent image={imageContent} content={content} />
   </main>
 </Layout>
 
 <style lang="scss">
-  .icon-favorite {
-    color: red;
-  }
-
   section {
-    padding: 24px;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
   }
 
-  h1 {
-    @include display;
+  .CTA {
+    &__img {
+      width: 100vw;
+      height: calc(100vh - 80px);
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      color: #efefef;
+      text-align: center;
+    }
+
+    &__title {
+      @include display;
+    }
+
+    &__headline {
+      @include headline;
+    }
   }
 </style>
